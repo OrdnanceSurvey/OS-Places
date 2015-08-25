@@ -4,7 +4,7 @@ print ('------------------------error 404 --------------------------------------
 url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/find?'
 values = {'query':'''ORDNANCE SURVEY, 4, ADANAC DRIVE, NURSLING, SOUTHAMPTON, SO1 0AS''',
           'dataset':'DPA,LPI', 
-          'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'}
+          'key':'INSERT_YOUR_API_KEY_HERE'}
 data = urllib.urlencode(values)
 req = urllib2.Request(url, data)
 try:
@@ -37,7 +37,7 @@ print ('------------------------error 401 --------------------------------------
 url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/find?'
 values = {'query':'''ORDNANCE SURVEY, 4, ADANAC DRIVE, NURSLING, SOUTHAMPTON, SO1 0AS''',
           'dataset':'DPA,LPI', 
-          'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'}
+          'key':'INSERT_YOUR_API_KEY_HERE'}
 data = urllib.urlencode(values)
 req = urllib2.Request(url, data)
 try:
@@ -69,7 +69,7 @@ print ('------------------------second try -------------------------------------
 url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/find'
 values = {'query':'ORDNANCE SURVEY, 4, ADANAC DRIVE NURSLING SOUTHAMPTON SO1 0AS',
           'dataset':'DPA,LPI', 
-          'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'}
+          'key':'INSERT_YOUR_API_KEY_HERE'}
 full_url = url + '?' + data
 print full_url
 try:

@@ -1,10 +1,10 @@
-import urllib
+import urllib2
 
-url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/nearest?%s'
-params = urllib.urlencode({'point':'437342.5,115485.5','dataset':'DPA,LPI', 'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'})
+url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/uprn?%s'
+params = urllib2.urlencode({'uprn':200010019924,'dataset':'DPA,LPI', 'key':'INSERT_YOUR_API_KEY_HERE'})
 
 try:
-    f = urllib.urlopen(url % params)
+    f = urllib2.urlopen(url % params)
 except Exception as e:
     print(str(e))
     

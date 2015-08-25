@@ -2,7 +2,7 @@ from urllib2 import Request, urlopen, URLError, HTTPError
 
 url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/bbox?'
 
-params = [['bbox',437318.0,115426.1,437367.0,115766.0],['dataset','DPA','LPI'],['key','6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G']]
+params = [['bbox',437318.0,115426.1,437367.0,115766.0],['dataset','DPA','LPI'],['key','INSERT_YOUR_API_KEY_HERE']]
 
 for param_count, param in enumerate(params): #a list
     for value_count, value in enumerate(param):

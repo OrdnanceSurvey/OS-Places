@@ -1,8 +1,7 @@
 import urllib
 
-opener = urllib.FancyURLopener({})
-url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/postcode?%s'
-params = urllib.urlencode({'postcode':'so16%200AS','dataset':'DPA,LPI', 'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'})
+url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/nearest?%s'
+params = urllib.urlencode({'point':'437342.5,115485.5','dataset':'DPA,LPI', 'key':'INSERT_YOUR_API_KEY_HERE'})
 
 try:
     f = urllib.urlopen(url % params)
@@ -18,6 +17,6 @@ for line in response.splitlines():
     word_lst = line.split(':')
     for word in word_lst:
         if '"ADDRESS" ' in word: print(line)
-        if 'UPRN' in word: print(line)
         if 'COORDINATE' in word: print(line)    
+        if 'UPRN' in word: print(line)
 f.close()

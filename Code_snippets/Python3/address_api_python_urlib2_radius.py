@@ -1,7 +1,7 @@
 import urllib
 
 url = 'https://api.ordnancesurvey.co.uk/places/v1/addresses/nearest?%s'
-params = urllib.urlencode({'point':'437342.5,115485.5','dataset':'DPA,LPI', 'key':'6e0WvXJsEzPd1G1pqkRMlGgODvsEg50G'})
+params = urllib.urlencode({'point':'437342.5,115485.5','dataset':'DPA,LPI', 'key':'INSERT_YOUR_API_KEY_HERE'})
 
 try:
     f = urllib.urlopen(url % params)
