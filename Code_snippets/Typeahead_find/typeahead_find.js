@@ -4,7 +4,7 @@ var places = new Bloodhound({
     },
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     remote: {
-        url: 'https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=%QUERY&key=cSUnSnxJXhibWYPqaC58MlSqqJldByak',
+        url: 'https://api.ordnancesurvey.co.uk/places/v1/addresses/find?query=%QUERY&key=INSERT_YOUR_API_KEY_HERE',
         filter: function(places) {
             // Map the remote source JSON array to a JavaScript object array
             return $.map(places.results, function(address) {
