@@ -92,7 +92,7 @@ map.on('draw:created', function(e) {
     }
     else if (type === 'circle') {
         var radius = layer.getRadius().toFixed(2);
-        var projpoint = (proj4('WGS84', epsg27700,[layer.getLatLng().lng, layer.getLatLng().lat]));
+        var projpoint = (proj4('WGS84', epsg27700, [layer.getLatLng().lng, layer.getLatLng().lat]));
         var point = projpoint[0].toFixed(2) + ',' + projpoint[1].toFixed(2);
 
         $.ajax('https://api.ordnancesurvey.co.uk/places/v1/addresses/radius?', {
@@ -107,7 +107,7 @@ map.on('draw:created', function(e) {
             for (var i = 0; i < data.results.length; i++) {
                 var coord = L.latLng(proj4(epsg27700, 'WGS84', [data.results[i].DPA.X_COORDINATE, data.results[i].DPA.Y_COORDINATE]))
                 var latLng = L.latLng(coord.lng, coord.lat);
-                var marker = L.marker(latLng).addTo(addresses)
+                var marker = L.marker(latLng).addTo(addresses);
                 marker.bindPopup(data.results[i].DPA.ADDRESS).openPopup();
 
             }

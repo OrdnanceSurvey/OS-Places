@@ -1,7 +1,7 @@
 // Create Leaflet tilelayer with OS Mapping API
 
 var OS = new L.TileLayer('https://api.ordnancesurvey.co.uk/mapping_api/service/zxy/{tilematrixSet}/{layer}/{z}/{x}/{y}.{imgFormat}?apikey={apikey}', {
-    apikey: 'INSERT_YOUR_API_KEY_HERE',
+    apikey: '7XTyNJ0sXvUoiOgkcwcqJ8aSkFgHOD4H',
     tilematrixSet: 'EPSG:27700',
     layer: 'Zoom Map Tactical 27700',
     imgFormat: 'png',
