@@ -1,9 +1,9 @@
 // Create Leaflet tilelayer with OS Mapping API
 
-var OS = new L.TileLayer('https://api.ordnancesurvey.co.uk/mapping_api/service/zxy/{tilematrixSet}/{layer}/{z}/{x}/{y}.{imgFormat}?apikey={apikey}', {
-    apikey: '7XTyNJ0sXvUoiOgkcwcqJ8aSkFgHOD4H',
+var OS = new L.TileLayer('https:///api2.ordnancesurvey.co.uk/mapping_api/v1/service/zxy/{tilematrixSet}/{layer}/{z}/{x}/{y}.{imgFormat}?key={apikey}', {
+    apikey: 'INSERT_YOUR_API_KEY_HERE',
     tilematrixSet: 'EPSG:27700',
-    layer: 'Zoom Map Tactical 27700',
+    layer: 'Outdoor 27700',
     imgFormat: 'png',
     continuousWorld: true
 });
@@ -18,7 +18,7 @@ var epsg27700 = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999601 +x_0=400000 +y_0=-1
 var crs = new L.Proj.CRS(
     'EPSG:27700',
     epsg27700, {
-        transformation: new L.Transformation(1, 0, -1, 1376256),
+        transformation: new L.Transformation(1, 238375, -1, 1376256),
         resolutions: [896.0, 448.0, 224.0, 112.0, 56.0, 28.0, 14.0, 7.0, 3.5, 1.75, 0.875, 0.4375, 0.21875, 0.109375],
     });
 
@@ -73,7 +73,7 @@ map.on('draw:created', function(e) {
         $.ajax('https://api.ordnancesurvey.co.uk/places/v1/addresses/bbox?', {
             data: {
                 bbox: bbox,
-                key: 'cSUnSnxJXhibWYPqaC58MlSqqJldByak'
+                key: 'INSERT_YOUR_API_KEY_HERE'
             },
             crossDomain: true
         }).done(function(data) {
@@ -99,7 +99,7 @@ map.on('draw:created', function(e) {
             data: {
                 point: point,
                 radius: radius,
-                key: 'cSUnSnxJXhibWYPqaC58MlSqqJldByak'
+                key: 'INSERT_YOUR_API_KEY_HERE'
             },
             crossDomain: true
         }).done(function(data) {
