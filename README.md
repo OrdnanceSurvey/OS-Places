@@ -6,14 +6,6 @@ Register for an API key of OS Places API [here](https://developer.ordnancesurvey
 
 Full documentation for the OS Places API can be found [here](https://apidocs.os.uk/docs/os-places-overview), while service terms for OS Places API can be found [here](https://developer.ordnancesurvey.co.uk/sites/default/files/OS_Places_v2-1.pdf).
 
-##About OS Places API
-
-OS Open Names is a geographic directory containing basic information about identifiable places. Those places are divided into themes, but the name of the place is the key property we use in queries.
-Within OS Open Names, place names aren’t unique. Extra location details are provided to help users refine their queries and accurately identify the named place they’re interested in. These details include postcode district, populated place, district/borough, county/unitary authority, European region and country.
-
-We also recognise that one place may have more than one name: an official name, such as Cardiff (English) and then another name, Caerdydd (Welsh).
-Our specification will extend the Infrastructure for Spatial Information in the European Community (INSPIRE) Geographical Names theme to ensure it’s compliant with European open data initiatives.
-
 ##License
 
 These demos are released under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html).
